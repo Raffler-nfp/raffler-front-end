@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { AppBar } from "@material-ui/core";
 import Toolbar from "./Toolbar";
 import Link from "@material-ui/core/Link";
+import clsx from "clsx";
 
 import rafflerLogo from "../assets/raffler_logo.png";
 
@@ -72,6 +73,15 @@ const useStyles = makeStyles(theme => ({
   toolbarContainer: {
     width: "100%",
     maxWidth: 1280
+  },
+  green: {
+    color: "#00f0a0"
+  },
+  blue: {
+    color: "#66fcf1"
+  },
+  purple: {
+    color: "#ffc9f8"
   }
 }));
 
@@ -90,7 +100,7 @@ export default function NavBar() {
                 variant="button"
                 color="textSecondary"
                 href="#"
-                className={classes.link}
+                className={clsx(classes.link, classes.green)}
               >
                 Home
               </Link>
@@ -98,7 +108,7 @@ export default function NavBar() {
                 variant="button"
                 color="textPrimary"
                 href="/#"
-                className={classes.link}
+                className={clsx(classes.link, classes.blue)}
               >
                 Learn more
               </Link>
@@ -106,7 +116,7 @@ export default function NavBar() {
                 variant="button"
                 color="textPrimary"
                 href="/signup"
-                className={classes.link}
+                className={clsx(classes.link, classes.purple)}
               >
                 Signup
               </Link>

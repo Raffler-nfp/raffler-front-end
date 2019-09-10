@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles, Typography, Grid } from "@material-ui/core";
 import HeroLayout from "./HeroLayout";
-
+import clsx from "clsx";
 // import backgroundImage from "../assets/background.png";
 import laptopImage from "../assets/laptop_image.png";
 
@@ -48,6 +48,15 @@ const useStyles = makeStyles(theme => ({
   },
   mainText: {
     marginRight: 120
+  },
+  green: {
+    color: "#00f0a0"
+  },
+  blue: {
+    color: "#66fcf1"
+  },
+  purple: {
+    color: "#ffc9f8"
   }
 }));
 
@@ -61,10 +70,9 @@ function Hero(props: any) {
         <Grid className={classes.mainText}>
           <div className={classes.heightFiller} />
           <Typography
-            color="inherit"
             align="left"
             variant="h2"
-            className={classes.heroTitle}
+            className={clsx(classes.heroTitle, classes.green)}
             gutterBottom
           >
             A Company
@@ -73,7 +81,7 @@ function Hero(props: any) {
             color="inherit"
             align="left"
             variant="h2"
-            className={classes.heroTitle}
+            className={clsx(classes.heroTitle, classes.blue)}
             gutterBottom
           >
             That
@@ -82,7 +90,7 @@ function Hero(props: any) {
             color="inherit"
             align="left"
             variant="h2"
-            className={classes.heroTitle}
+            className={clsx(classes.heroTitle, classes.purple)}
             gutterBottom
           >
             gives.
