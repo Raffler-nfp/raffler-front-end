@@ -1,4 +1,4 @@
-### Frontend Code for Raffle Backend
+### Frontend Code for Raffler Backend
 
 Install it and run:
 
