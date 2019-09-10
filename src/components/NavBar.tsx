@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { AppBar, Container } from "@material-ui/core";
+import { AppBar } from "@material-ui/core";
 import Toolbar from "./Toolbar";
 import Link from "@material-ui/core/Link";
 
@@ -17,7 +17,6 @@ const useStyles = makeStyles(theme => ({
   menu: {
     width: "100%",
     display: "flex",
-    justifyContent: "space-around",
     [theme.breakpoints.down("sm")]: {
       display: "none"
     }
@@ -61,13 +60,18 @@ const useStyles = makeStyles(theme => ({
     fontSize: "2rem",
     fontFamily: "'Anton', sans-serif",
     margin: theme.spacing(1, 1.5),
-    color: "#fff"
+    color: "#fff",
+    marginLeft: 180
   },
   nav: {
     justifyContent: "space-around"
   },
   logo: {
     maxWidth: 300
+  },
+  toolbarContainer: {
+    width: "100%",
+    maxWidth: 1280
   }
 }));
 
@@ -79,7 +83,7 @@ export default function NavBar() {
         <Link href="/">
           <img src={rafflerLogo} alt="" className={classes.logo} />
         </Link>
-        <Container>
+        <div className={classes.toolbarContainer}>
           <Toolbar>
             <nav className={classes.menu}>
               <Link
@@ -108,7 +112,7 @@ export default function NavBar() {
               </Link>
             </nav>
           </Toolbar>
-        </Container>
+        </div>
       </AppBar>
     </React.Fragment>
   );

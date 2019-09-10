@@ -2,24 +2,23 @@ import React from "react";
 import { makeStyles, Typography, Grid } from "@material-ui/core";
 import HeroLayout from "./HeroLayout";
 
-const backgroundImage = "../assets/background.png";
+// import backgroundImage from "../assets/background.png";
+import laptopImage from "../assets/laptop_image.png";
 
 const useStyles = makeStyles(theme => ({
   heroTitle: {
     textTransform: "uppercase",
-    fontFamily: "'Anton', sans-serif"
-  },
-  formContainer: {
-    marginTop: theme.spacing(3)
+    fontFamily: "'Anton', sans-serif",
+    fontSize: "4.5rem"
   },
   heightFiller: {
-    marginTop: 120,
+    marginTop: 100,
     [theme.breakpoints.up("sm")]: {
-      marginTop: 240
+      marginTop: 60
     }
   },
   background: {
-    backgroundImage: `url(${backgroundImage})`,
+    // backgroundImage: `url(${backgroundImage})`,
     backgroundColor: "#ff0048",
     backgroundPosition: "center"
   },
@@ -35,6 +34,20 @@ const useStyles = makeStyles(theme => ({
   },
   more: {
     marginTop: theme.spacing(2)
+  },
+  heroContainer: {
+    display: "flex",
+    justifyContent: "space-between",
+    width: "100%"
+  },
+  heroImage: {
+    maxWidth: 750
+  },
+  left: {
+    flex: 1
+  },
+  mainText: {
+    marginRight: 120
   }
 }));
 
@@ -43,20 +56,43 @@ function Hero(props: any) {
 
   return (
     <HeroLayout backgroundClassName={classes.background}>
-      <div className={classes.heightFiller} />
-      <Grid>
-        <Typography
-          color="inherit"
-          align="left"
-          variant="h1"
-          className={classes.heroTitle}
-          gutterBottom
-        >
-          A Company that gives
-        </Typography>
-      </Grid>
+      <div className={classes.heroContainer}>
+        <div className={classes.left} />
+        <Grid className={classes.mainText}>
+          <div className={classes.heightFiller} />
+          <Typography
+            color="inherit"
+            align="left"
+            variant="h2"
+            className={classes.heroTitle}
+            gutterBottom
+          >
+            A Company
+          </Typography>
+          <Typography
+            color="inherit"
+            align="left"
+            variant="h2"
+            className={classes.heroTitle}
+            gutterBottom
+          >
+            That
+          </Typography>
+          <Typography
+            color="inherit"
+            align="left"
+            variant="h2"
+            className={classes.heroTitle}
+            gutterBottom
+          >
+            gives.
+          </Typography>
+        </Grid>
 
-      <Grid className={classes.formContainer}></Grid>
+        <Grid>
+          <img src={laptopImage} alt="" className={classes.heroImage} />
+        </Grid>
+      </div>
     </HeroLayout>
   );
 }
