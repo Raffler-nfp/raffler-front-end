@@ -68,7 +68,8 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "space-around"
   },
   logo: {
-    maxWidth: 300
+    maxWidth: 250,
+    marginRight: 100
   },
   toolbarContainer: {
     width: "100%",

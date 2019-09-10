@@ -41,13 +41,13 @@ const useStyles = makeStyles(theme => ({
     width: "100%"
   },
   heroImage: {
-    maxWidth: 750
+    maxWidth: 580
   },
   left: {
     flex: 1
   },
   mainText: {
-    marginRight: 120
+    marginRight: 180
   },
   green: {
     color: "#00f0a0"
