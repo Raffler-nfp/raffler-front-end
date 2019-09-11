@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { AppBar } from "@material-ui/core";
+import { AppBar, Container } from "@material-ui/core";
 import Toolbar from "./Toolbar";
 import Link from "@material-ui/core/Link";
 import clsx from "clsx";
@@ -8,7 +8,8 @@ import clsx from "clsx";
 import rafflerLogo from "../assets/raffler_logo.png";
 
 const useStyles = makeStyles(theme => ({
-  appBar: {
+  appBarContainer: {
+    display: "flex",
     flexDirection: "row",
     padding: theme.spacing(1)
   },
@@ -90,40 +91,42 @@ export default function NavBar() {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <AppBar position="static" elevation={0} className={classes.appBar}>
-        <Link href="/">
-          <img src={rafflerLogo} alt="" className={classes.logo} />
-        </Link>
-        <div className={classes.toolbarContainer}>
-          <Toolbar>
-            <nav className={classes.menu}>
-              <Link
-                variant="button"
-                color="textSecondary"
-                href="#"
-                className={clsx(classes.link, classes.green)}
-              >
-                Home
-              </Link>
-              <Link
-                variant="button"
-                color="textPrimary"
-                href="/#"
-                className={clsx(classes.link, classes.blue)}
-              >
-                Learn more
-              </Link>
-              <Link
-                variant="button"
-                color="textPrimary"
-                href="/signup"
-                className={clsx(classes.link, classes.purple)}
-              >
-                Signup
-              </Link>
-            </nav>
-          </Toolbar>
-        </div>
+      <AppBar position="static" elevation={0}>
+        <Container maxWidth="xl" className={classes.appBarContainer}>
+          <Link href="/">
+            <img src={rafflerLogo} alt="" className={classes.logo} />
+          </Link>
+          <div className={classes.toolbarContainer}>
+            <Toolbar>
+              <nav className={classes.menu}>
+                <Link
+                  variant="button"
+                  color="textSecondary"
+                  href="#"
+                  className={clsx(classes.link, classes.green)}
+                >
+                  Home
+                </Link>
+                <Link
+                  variant="button"
+                  color="textPrimary"
+                  href="/#"
+                  className={clsx(classes.link, classes.blue)}
+                >
+                  Learn more
+                </Link>
+                <Link
+                  variant="button"
+                  color="textPrimary"
+                  href="/signup"
+                  className={clsx(classes.link, classes.purple)}
+                >
+                  Signup
+                </Link>
+              </nav>
+            </Toolbar>
+          </div>
+        </Container>
       </AppBar>
     </React.Fragment>
   );
