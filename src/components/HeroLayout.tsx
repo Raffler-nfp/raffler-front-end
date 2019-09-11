@@ -1,7 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
+import { Container } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -10,8 +10,8 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     // alignItems: "center",
     [theme.breakpoints.up("sm")]: {
-      height: "100vh",
-      minHeight: 500,
+      height: "50vh",
+      minHeight: 300,
       maxHeight: 1300
     }
   },
@@ -54,9 +54,9 @@ export default function HeroLayout(props: any) {
 
   return (
     <section className={classes.root}>
-      <Container className={classes.container}>
+      <Container maxWidth="xl">
         {children}
-        <div className={classes.backdrop} />
+        {/* <div className={classes.backdrop} /> */}
         <div className={clsx(classes.background, backgroundClassName)} />
       </Container>
     </section>

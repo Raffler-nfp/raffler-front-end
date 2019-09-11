@@ -1,8 +1,9 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { AppBar, Container } from "@material-ui/core";
+import { AppBar } from "@material-ui/core";
 import Toolbar from "./Toolbar";
 import Link from "@material-ui/core/Link";
+import clsx from "clsx";
 
 import rafflerLogo from "../assets/raffler_logo.png";
 
@@ -17,7 +18,6 @@ const useStyles = makeStyles(theme => ({
   menu: {
     width: "100%",
     display: "flex",
-    justifyContent: "space-around",
     [theme.breakpoints.down("sm")]: {
       display: "none"
     }
@@ -61,13 +61,28 @@ const useStyles = makeStyles(theme => ({
     fontSize: "2rem",
     fontFamily: "'Anton', sans-serif",
     margin: theme.spacing(1, 1.5),
-    color: "#fff"
+    color: "#fff",
+    marginLeft: 180
   },
   nav: {
     justifyContent: "space-around"
   },
   logo: {
-    maxWidth: 300
+    maxWidth: 250,
+    marginRight: 100
+  },
+  toolbarContainer: {
+    width: "100%",
+    maxWidth: 1280
+  },
+  green: {
+    color: "#00f0a0"
+  },
+  blue: {
+    color: "#66fcf1"
+  },
+  purple: {
+    color: "#ffc9f8"
   }
 }));
 
@@ -79,14 +94,14 @@ export default function NavBar() {
         <Link href="/">
           <img src={rafflerLogo} alt="" className={classes.logo} />
         </Link>
-        <Container>
+        <div className={classes.toolbarContainer}>
           <Toolbar>
             <nav className={classes.menu}>
               <Link
                 variant="button"
                 color="textSecondary"
                 href="#"
-                className={classes.link}
+                className={clsx(classes.link, classes.green)}
               >
                 Home
               </Link>
@@ -94,7 +109,7 @@ export default function NavBar() {
                 variant="button"
                 color="textPrimary"
                 href="/#"
-                className={classes.link}
+                className={clsx(classes.link, classes.blue)}
               >
                 Learn more
               </Link>
@@ -102,13 +117,13 @@ export default function NavBar() {
                 variant="button"
                 color="textPrimary"
                 href="/signup"
-                className={classes.link}
+                className={clsx(classes.link, classes.purple)}
               >
                 Signup
               </Link>
             </nav>
           </Toolbar>
-        </Container>
+        </div>
       </AppBar>
     </React.Fragment>
   );
