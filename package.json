@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "latest",
     "@material-ui/icons": "^4.4.1",
+    "@material-ui/styles": "^4.4.1",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "clsx": "^1.0.4",
