@@ -8,6 +8,10 @@ import clsx from "clsx";
 import rafflerLogo from "../assets/raffler_logo.png";
 
 const useStyles = makeStyles(theme => ({
+  logoContainer: {
+    display: "flex",
+    alignSelf: "center"
+  },
   appBarContainer: {
     display: "flex",
     flexDirection: "row",
@@ -59,7 +63,7 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.secondary.main
   },
   link: {
-    fontSize: "2rem",
+    fontSize: "1.2rem",
     fontFamily: "'Anton', sans-serif",
     margin: theme.spacing(1, 1.5),
     color: "#fff",
@@ -69,7 +73,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "space-around"
   },
   logo: {
-    maxWidth: 250,
+    maxWidth: 180,
     marginRight: 100
   },
   toolbarContainer: {
@@ -92,40 +96,38 @@ export default function NavBar() {
   return (
     <React.Fragment>
       <AppBar position="static" elevation={0}>
-        <Container maxWidth="xl" className={classes.appBarContainer}>
-          <Link href="/">
+        <Container maxWidth="lg" className={classes.appBarContainer}>
+          <Link href="/" className={classes.logoContainer}>
             <img src={rafflerLogo} alt="" className={classes.logo} />
           </Link>
-          <div className={classes.toolbarContainer}>
-            <Toolbar>
-              <nav className={classes.menu}>
-                <Link
-                  variant="button"
-                  color="textSecondary"
-                  href="#"
-                  className={clsx(classes.link, classes.green)}
-                >
-                  Home
-                </Link>
-                <Link
-                  variant="button"
-                  color="textPrimary"
-                  href="/#"
-                  className={clsx(classes.link, classes.blue)}
-                >
-                  Learn more
-                </Link>
-                <Link
-                  variant="button"
-                  color="textPrimary"
-                  href="/signup"
-                  className={clsx(classes.link, classes.purple)}
-                >
-                  Signup
-                </Link>
-              </nav>
-            </Toolbar>
-          </div>
+          <Toolbar>
+            <nav className={classes.menu}>
+              <Link
+                variant="button"
+                color="textSecondary"
+                href="#"
+                className={clsx(classes.link, classes.green)}
+              >
+                Home
+              </Link>
+              <Link
+                variant="button"
+                color="textPrimary"
+                href="/#"
+                className={clsx(classes.link, classes.blue)}
+              >
+                Learn more
+              </Link>
+              <Link
+                variant="button"
+                color="textPrimary"
+                href="/signup"
+                className={clsx(classes.link, classes.purple)}
+              >
+                Signup
+              </Link>
+            </nav>
+          </Toolbar>
         </Container>
       </AppBar>
     </React.Fragment>

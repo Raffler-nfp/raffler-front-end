@@ -7,6 +7,12 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     justifyContent: "center",
     background: "linear-gradient(to bottom, #ff0048 50%, #fff 50%);"
+  },
+  logoContainer: {
+    maxWidth: "300px"
+  },
+  rafflerLogo: {
+    width: "100%"
   }
 }));
 
@@ -14,7 +20,9 @@ export default function RafflerBar() {
   const classes = useStyles();
   return (
     <div className={classes.rafflerBarContainer}>
-      <img src={rafflerLogo} alt="" />
+      <div className={classes.logoContainer}>
+        <img src={rafflerLogo} alt="" className={classes.rafflerLogo} />
+      </div>
     </div>
   );
 }
