@@ -15,7 +15,7 @@ import { red } from "@material-ui/core/colors";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     card: {
-      maxWidth: 345
+      maxWidth: 250
     },
     media: {
       height: 0,
@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export default function RecipeReviewCard() {
+export default function CategoryCard({ info }: any) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -54,7 +54,7 @@ export default function RecipeReviewCard() {
           </Avatar>
         }
         action={<IconButton aria-label="settings"></IconButton>}
-        title="Shrimp and Chorizo Paella"
+        title={info.title}
         subheader="September 14, 2016"
       />
       <CardMedia

@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   contentContainer: {
     display: "flex",
-    padding: theme.spacing(4, 0),
+    padding: theme.spacing(8, 0, 4, 0),
     justifyContent: "center"
   },
   textContainer: {
@@ -30,6 +30,9 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   imgContainer: {
     maxWidth: 400
+  },
+  button: {
+    marginTop: theme.spacing(2)
   }
 }));
 
@@ -68,7 +71,9 @@ export default function TextBox() {
         >
           Revenue raised is donated to charitable organizations!
         </Typography>
-        <Button> Sign up</Button>
+        <Button variant="contained" color="primary" className={classes.button}>
+          Sign up
+        </Button>
       </div>
       <div className={classes.imgContainer}>
         <img src={orgImage} alt="" className={classes.img} />
