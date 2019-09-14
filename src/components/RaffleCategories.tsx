@@ -1,5 +1,11 @@
 import React from "react";
+import CategoryCard from "./CategoryCard";
 
 export default function RaffleCategories() {
-  return <div>Categories</div>;
+  return (
+    <React.Fragment>
+      <div>Categories</div>
+      <CategoryCard />
+    </React.Fragment>
+  );
 }

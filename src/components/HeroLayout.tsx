@@ -54,7 +54,7 @@ export default function HeroLayout(props: any) {
 
   return (
     <section className={classes.root}>
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         {children}
         {/* <div className={classes.backdrop} /> */}
         <div className={clsx(classes.background, backgroundClassName)} />

@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
   heroTitle: {
     textTransform: "uppercase",
     fontFamily: "'Anton', sans-serif",
-    fontSize: "4.5rem"
+    fontSize: "3.2rem"
   },
   heightFiller: {
     marginTop: 100,
