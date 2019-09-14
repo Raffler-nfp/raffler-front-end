@@ -103,7 +103,6 @@ export default function NavBar() {
           <Toolbar>
             <nav className={classes.menu}>
               <Link
-                variant="button"
                 color="textSecondary"
                 href="#"
                 className={clsx(classes.link, classes.green)}
@@ -111,7 +110,6 @@ export default function NavBar() {
                 Home
               </Link>
               <Link
-                variant="button"
                 color="textPrimary"
                 href="/#"
                 className={clsx(classes.link, classes.blue)}
@@ -119,12 +117,11 @@ export default function NavBar() {
                 Learn more
               </Link>
               <Link
-                variant="button"
                 color="textPrimary"
                 href="/signup"
                 className={clsx(classes.link, classes.purple)}
               >
-                Signup
+                Sign Up
               </Link>
             </nav>
           </Toolbar>
