@@ -15,6 +15,12 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: "#ac4da0",
       color: "#fff"
     },
+    title: {
+      fontSize: "1rem",
+      textTransform: "uppercase",
+      fontWeight: 500,
+      marginBottom: theme.spacing(1)
+    },
     media: {
       height: 0,
       paddingTop: "56.25%" // 16:9
@@ -32,7 +38,12 @@ const useStyles = makeStyles((theme: Theme) =>
     avatar: {
       backgroundColor: red[500]
     },
-    content: {}
+    text: {
+      color: "#fff"
+    },
+    content: {
+      minHeight: 180
+    }
   })
 );
 
@@ -41,16 +52,13 @@ export default function CategoryCard({ info }: any) {
 
   return (
     <Card className={classes.card}>
-      <CardMedia
-        className={classes.media}
-        image={info.image}
-        title="Paella dish"
-      />
+      <CardMedia className={classes.media} image={info.image} />
       <CardContent className={classes.content}>
-        <Typography variant="h5"> {info.title}</Typography>
-        <Typography variant="body2" color="textSecondary" component="p">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests.
+        <Typography variant="h5" className={classes.title}>
+          {info.title}
+        </Typography>
+        <Typography variant="body2" className={classes.text} component="p">
+          {info.text}
         </Typography>
       </CardContent>
       <CardActions>
