@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "#00f0a0"
   },
   logo: {
-    maxWidth: 200
+    maxWidth: 150
   },
   footerContainer: {
     display: "flex",
@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex"
   },
   link: {
-    fontSize: "2rem",
+    fontSize: "1.2rem",
     fontFamily: "'Anton', sans-serif",
     color: "#fff",
     marginLeft: 180
@@ -34,16 +34,10 @@ export default function Footer() {
         <div className={classes.footerContainer}>
           <img src={rafflerLogo} className={classes.logo} alt="" />
           <nav className={classes.footerMenu}>
-            <Link
-              variant="button"
-              color="textPrimary"
-              href="/#"
-              className={clsx(classes.link)}
-            >
+            <Link color="textPrimary" href="/#" className={clsx(classes.link)}>
               Contact us
             </Link>
             <Link
-              variant="button"
               color="textPrimary"
               href="/signup"
               className={clsx(classes.link)}

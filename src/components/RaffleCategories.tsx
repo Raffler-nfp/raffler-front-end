@@ -17,29 +17,31 @@ const content = [
     id: "1",
     title: "Win v-bucks",
     image: `${category1}`,
-    text: "something",
-    action: "comingsoon"
+    text:
+      "Win V-Bucks from the very popular game Fortnite. You can win up tp 200,000 V-Bucks",
+    action: "coming soon"
   },
   {
     id: "2",
     title: "Win shark cards",
     image: `${category2}`,
-    text: "something",
-    action: "comingsoon"
+    text:
+      "Win shark cards from the very popular game Grand Theft Auto V. You can win up to $500,000,000 in game dollars",
+    action: "coming soon"
   },
   {
     id: "3",
     title: "Raffler Original",
     image: `${category3}`,
-    text: "something",
-    action: "comingsoon"
+    text: "Win sought after luxury items and cash with Raffler Original",
+    action: "coming soon"
   },
   {
     id: "4",
     title: "More to come",
     image: `${category4}`,
-    text: "something",
-    action: "comingsoon"
+    text: "Raffler is realeasing new categories soon.",
+    action: "coming soon"
   }
 ];
 
@@ -68,6 +70,17 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   avatar: {
     backgroundColor: "#ac4da0"
+  },
+  categoryTitle: {
+    textTransform: "uppercase",
+    fontWeight: 500
+  },
+  subtitle: {
+    textTransform: "uppercase",
+    fontWeight: 300,
+    width: "60%",
+    margin: "auto",
+    marginBottom: theme.spacing(4)
   }
 }));
 
@@ -78,10 +91,18 @@ export default function RaffleCategories() {
       <ContentLayout className={classes.categoryContainer}>
         <div className={classes.categoryWrapper}>
           <div className={classes.categoryInner}>
-            <Typography variant="h5" align="center">
+            <Typography
+              variant="h5"
+              align="center"
+              className={classes.categoryTitle}
+            >
               Raffle Categories
             </Typography>
-            <Typography variant="h6" align="center">
+            <Typography
+              variant="h6"
+              align="center"
+              className={classes.subtitle}
+            >
               Raffler has an ever growing list of raffle categories to suit your
               needs and want. On account links all.
             </Typography>
