@@ -3,10 +3,8 @@ import { Container } from "@material-ui/core";
 
 export default function ContentLayout({ className, children }: any) {
   return (
-    <section>
-      <Container maxWidth="lg" className={className}>
-        {children}
-      </Container>
+    <section className={className}>
+      <Container maxWidth="lg">{children}</Container>
     </section>
   );
 }
