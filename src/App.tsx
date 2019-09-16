@@ -1,21 +1,20 @@
 import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
-import Hero from "./components/Hero";
-import RafflerBar from "./components/RafflerBar";
-import TextBox from "./components/TextBox";
 import Footer from "./components/Footer";
-import RaffleCategories from "./components/RaffleCategories";
+import Main from "./pages/Main";
+import SignUp from "./pages/SignUp";
 
 export default function App() {
   return (
     <React.Fragment>
-      <NavBar />
-      <Hero />
-      <RafflerBar />
-      <TextBox />
-      <RaffleCategories />
-      <Footer />
+      <Router>
+        <NavBar />
+        <Route path="/" exact component={Main} />
+        <Route path="/signup" component={SignUp} />
+        <Footer />
+      </Router>
     </React.Fragment>
   );
 }
