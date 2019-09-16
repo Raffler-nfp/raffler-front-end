@@ -6,16 +6,17 @@ import { TextField as MuiTextField } from "formik-material-ui";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    padding: 0,
-    backgroundColor: theme.palette.common.white,
-    transition: "none",
-    "&:hover": {
-      backgroundColor: theme.palette.common.white
-    },
-    "&:focus": {
-      backgroundColor: theme.palette.common.white
-    },
-    borderRadius: 0
+    // padding: 0,
+    backgroundColor: theme.palette.common.white
+    // transition: "none",
+    // "&:hover": {
+    //   backgroundColor: theme.palette.common.white
+    // },
+    // "&:focus": {
+    //   backgroundColor: theme.palette.common.white
+    // },
+
+    // borderRadius: 0
   },
   disabled: {},
   inputSizeSmall: {
@@ -35,7 +36,7 @@ const useStyles = makeStyles(theme => ({
     width: `calc(100% - ${25 * 2}px)`
   },
   formLabel: {
-    fontSize: 12
+    fontSize: 16
   },
   select: {
     height: "auto",
@@ -44,6 +45,9 @@ const useStyles = makeStyles(theme => ({
   selectIcon: {
     top: "50%",
     marginTop: -12
+  },
+  input: {
+    padding: 12
   }
 }));
 
@@ -52,8 +56,8 @@ function TextField(props: any) {
   const {
     InputProps: { ...InputPropsOther } = {},
     InputLabelProps,
-    noBorder = false,
-    size = "medium",
+    // noBorder = false,
+    // size = "medium",
     SelectProps,
     ...other
   } = props;
@@ -64,7 +68,7 @@ function TextField(props: any) {
         disableUnderline: true,
         classes: {
           root: classes.root,
-          input: clsx(classes.inputSizeMedium),
+          input: clsx(classes.inputSizeMedium, classes.input),
           disabled: classes.disabled
         },
         ...InputPropsOther

@@ -36,21 +36,17 @@ export const SignUpForm: React.SFC<{}> = () => {
           <Form>
             <Field
               name="fullName"
-              label="NAME:"
-              variant="filled"
+              placeholder="NAME:"
               type="text"
               fullWidth
               className={classes.textField}
               component={TextField}
-              size={"small"}
             />
             <Field
               name="email"
-              label="EMAIL:"
-              variant="filled"
+              placeholder="EMAIL:"
               type="text"
               fullWidth
-              size={"small"}
               className={classes.textField}
               component={TextField}
             />
