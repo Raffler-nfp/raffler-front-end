@@ -5,11 +5,15 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { red } from "@material-ui/core/colors";
+import { CardActions, Button } from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     card: {
-      maxWidth: 200
+      maxWidth: 200,
+      borderRadius: 0,
+      backgroundColor: "#ac4da0",
+      color: "#fff"
     },
     media: {
       height: 0,
@@ -28,10 +32,7 @@ const useStyles = makeStyles((theme: Theme) =>
     avatar: {
       backgroundColor: red[500]
     },
-    content: {
-      backgroundColor: "#ac4da0",
-      color: "#fff"
-    }
+    content: {}
   })
 );
 
@@ -47,7 +48,7 @@ export default function CategoryCard({ info }: any) {
     <Card className={classes.card}>
       <CardMedia
         className={classes.media}
-        image="/static/images/cards/paella.jpg"
+        image={info.image}
         title="Paella dish"
       />
       <CardContent className={classes.content}>
@@ -57,6 +58,9 @@ export default function CategoryCard({ info }: any) {
           together with your guests.
         </Typography>
       </CardContent>
+      <CardActions>
+        <Typography>Coming soon</Typography>
+      </CardActions>
     </Card>
   );
 }
