@@ -5,7 +5,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { red } from "@material-ui/core/colors";
-import { CardActions, Button } from "@material-ui/core";
+import { CardActions } from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -38,11 +38,6 @@ const useStyles = makeStyles((theme: Theme) =>
 
 export default function CategoryCard({ info }: any) {
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
-
-  function handleExpandClick() {
-    setExpanded(!expanded);
-  }
 
   return (
     <Card className={classes.card}>

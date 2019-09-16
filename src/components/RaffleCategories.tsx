@@ -88,7 +88,7 @@ export default function RaffleCategories() {
             <Grid container spacing={2}>
               {content.map(el => {
                 return (
-                  <Grid item md="auto">
+                  <Grid item md="auto" key={el.id}>
                     <CategoryCard info={el} />
                   </Grid>
                 );
