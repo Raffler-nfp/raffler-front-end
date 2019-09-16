@@ -12,7 +12,7 @@ export default function App() {
       <Router>
         <NavBar />
         <Route path="/" exact component={Main} />
-        <Route path="/signup" component={SignUp} />
+        <Route path="/sign-up" component={SignUp} />
         <Footer />
       </Router>
     </React.Fragment>
