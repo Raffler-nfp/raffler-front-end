@@ -2,7 +2,7 @@ import * as React from "react";
 import { Formik, FormikActions, FormikProps, Form, Field } from "formik";
 import TextField from "./TextField";
 import { makeStyles } from "@material-ui/styles";
-import { Theme, FormControlLabel } from "@material-ui/core";
+import { Theme, FormControlLabel, Button } from "@material-ui/core";
 import { CheckboxWithLabel } from "formik-material-ui";
 
 interface MyFormValues {
@@ -14,7 +14,13 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginBottom: theme.spacing(2)
   },
   formContainer: {
-    minWidth: 300
+    minWidth: 300,
+    color: "#fff"
+  },
+  button: {
+    color: "#fff",
+    fontFamily: "'Anton', sans-serif",
+    fontSize: "1.2rem"
   }
 }));
 
@@ -60,6 +66,7 @@ export const SignUpForm: React.SFC<{}> = () => {
               }
               label="I agree to the Terms & Conditions"
             />
+            <Button className={classes.button}> Sign up.</Button>
           </Form>
         )}
       />
