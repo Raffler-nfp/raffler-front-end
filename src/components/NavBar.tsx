@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { AppBar, Container } from "@material-ui/core";
 import Toolbar from "./Toolbar";
+import { Link as RouterLink, LinkProps } from "react-router-dom";
 import Link from "@material-ui/core/Link";
 import clsx from "clsx";
 
@@ -91,6 +92,10 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+const AdapterLink = React.forwardRef<HTMLAnchorElement, LinkProps>(
+  (props, ref) => <RouterLink innerRef={ref} {...props} />
+);
+
 export default function NavBar() {
   const classes = useStyles();
   return (
@@ -104,22 +109,25 @@ export default function NavBar() {
             <nav className={classes.menu}>
               <Link
                 color="textSecondary"
-                href="#"
+                to="/"
                 className={clsx(classes.link, classes.green)}
+                component={AdapterLink}
               >
                 Home
               </Link>
               <Link
                 color="textPrimary"
-                href="/#"
+                to="/learn-more"
                 className={clsx(classes.link, classes.blue)}
+                component={AdapterLink}
               >
                 Learn more
               </Link>
               <Link
                 color="textPrimary"
-                href="/signup"
+                to="/sign-up"
                 className={clsx(classes.link, classes.purple)}
+                component={AdapterLink}
               >
                 Sign Up
               </Link>

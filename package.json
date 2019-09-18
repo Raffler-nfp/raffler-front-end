@@ -8,9 +8,13 @@
     "@material-ui/styles": "^4.4.1",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "@types/react-router-dom": "^4.3.5",
     "clsx": "^1.0.4",
+    "formik": "^1.5.8",
+    "formik-material-ui": "0.0.22",
     "react": "latest",
     "react-dom": "latest",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "latest",
     "typescript": "latest"
   },
