@@ -47,7 +47,7 @@ const content = [
 
 const useStyles = makeStyles((theme: Theme) => ({
   categoryContainer: {
-    marginTop: theme.spacing(4),
+    paddingTop: theme.spacing(4),
     background: `url(${rafflerBackground})`,
     backgroundSize: "cover"
   },

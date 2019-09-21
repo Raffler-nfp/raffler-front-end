@@ -11,11 +11,20 @@ export default function App() {
   return (
     <React.Fragment>
       <Router>
-        <NavBar />
-        <Route path="/" exact component={Main} />
-        <Route path="/sign-up" component={SignUp} />
-        <Route path="/contact-us" component={ContactUs} />
-        <Footer />
+        <main
+          style={{
+            backgroundColor: "#ff0048",
+            minHeight: "100vh",
+            display: "flex",
+            flexDirection: "column"
+          }}
+        >
+          <NavBar />
+          <Route path="/" exact component={Main} />
+          <Route path="/sign-up" component={SignUp} />
+          <Route path="/contact-us" component={ContactUs} />
+          <Footer />
+        </main>
       </Router>
     </React.Fragment>
   );

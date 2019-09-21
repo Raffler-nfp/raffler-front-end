@@ -5,6 +5,7 @@ import ContactUsForm from "../components/ContactUsForm";
 
 const useStyles = makeStyles({
   container: {
+    marginTop: 100,
     background: "#ff0048",
     minHeight: 500,
     display: "flex",
