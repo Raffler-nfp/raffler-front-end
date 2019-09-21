@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, makeStyles } from "@material-ui/core";
 import Link from "@material-ui/core/Link";
+import { Link as RouterLink, LinkProps } from "react-router-dom";
 import rafflerLogo from "../assets/mint_green.png";
 import clsx from "clsx";
 
@@ -26,6 +27,10 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+const AdapterLink = React.forwardRef<HTMLAnchorElement, LinkProps>(
+  (props, ref) => <RouterLink innerRef={ref} {...props} />
+);
+
 export default function Footer() {
   const classes = useStyles();
   return (
@@ -34,7 +39,12 @@ export default function Footer() {
         <div className={classes.footerContainer}>
           <img src={rafflerLogo} className={classes.logo} alt="" />
           <nav className={classes.footerMenu}>
-            <Link color="textPrimary" href="/#" className={clsx(classes.link)}>
+            <Link
+              color="textPrimary"
+              to="/contact-us"
+              className={clsx(classes.link)}
+              component={AdapterLink}
+            >
               Contact us
             </Link>
             <Link
