@@ -7,6 +7,9 @@ import ContentLayout from "./ContentLayout";
 import orgImage from "../assets/orgs.jpg";
 
 const useStyles = makeStyles((theme: Theme) => ({
+  root: {
+    background: "#fff"
+  },
   useOswald: {
     fontFamily: '"Oswald", sans-serif'
   },
@@ -39,7 +42,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 export default function TextBox() {
   const classes = useStyles();
   return (
-    <ContentLayout>
+    <ContentLayout className={classes.root}>
       <div className={classes.contentContainer}>
         <div className={classes.textContainer}>
           <Typography

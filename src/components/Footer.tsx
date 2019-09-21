@@ -1,12 +1,15 @@
 import React from "react";
 import { Container, makeStyles } from "@material-ui/core";
 import Link from "@material-ui/core/Link";
+import { Link as RouterLink, LinkProps } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import rafflerLogo from "../assets/mint_green.png";
 import clsx from "clsx";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: "#00f0a0"
+    backgroundColor: "#00f0a0",
+    marginTop: "auto"
   },
   logo: {
     maxWidth: 150
@@ -23,18 +26,37 @@ const useStyles = makeStyles(theme => ({
     fontFamily: "'Anton', sans-serif",
     color: "#fff",
     marginLeft: 180
+  },
+  custom: {
+    backgroundColor: "#ffb6c1"
   }
 }));
 
-export default function Footer() {
+const AdapterLink = React.forwardRef<HTMLAnchorElement, LinkProps>(
+  (props, ref) => <RouterLink innerRef={ref} {...props} />
+);
+
+function Footer(props: any) {
+  console.log(props);
   const classes = useStyles();
   return (
-    <footer className={classes.root}>
+    <footer
+      className={
+        props.location.pathname === "/"
+          ? classes.root
+          : clsx(classes.root, classes.custom)
+      }
+    >
       <Container>
         <div className={classes.footerContainer}>
           <img src={rafflerLogo} className={classes.logo} alt="" />
           <nav className={classes.footerMenu}>
-            <Link color="textPrimary" href="/#" className={clsx(classes.link)}>
+            <Link
+              color="textPrimary"
+              to="/contact-us"
+              className={clsx(classes.link)}
+              component={AdapterLink}
+            >
               Contact us
             </Link>
             <Link
@@ -50,3 +72,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+export default withRouter(Footer);
