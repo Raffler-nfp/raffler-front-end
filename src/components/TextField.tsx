@@ -65,7 +65,6 @@ function TextField(props: any) {
   return (
     <MuiTextField
       InputProps={{
-        disableUnderline: true,
         classes: {
           root: classes.root,
           input: clsx(classes.inputSizeMedium, classes.input),

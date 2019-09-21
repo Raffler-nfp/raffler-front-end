@@ -43,6 +43,7 @@ export const ContactUsForm: React.SFC<{}> = () => {
               name="fullName"
               placeholder="NAME:"
               type="text"
+              variant="outlined"
               fullWidth
               className={classes.textField}
               component={TextField}
@@ -51,6 +52,7 @@ export const ContactUsForm: React.SFC<{}> = () => {
               name="email"
               placeholder="EMAIL:"
               type="text"
+              variant="outlined"
               fullWidth
               className={classes.textField}
               component={TextField}
@@ -59,12 +61,21 @@ export const ContactUsForm: React.SFC<{}> = () => {
               name="message"
               placeholder="MESSAGE:"
               type="text"
+              multiline={true}
+              rows={6}
+              variant="outlined"
               fullWidth
               className={classes.textField}
               component={TextField}
             />
 
-            <Button className={classes.button}> Contact Us</Button>
+            <Button
+              className={classes.button}
+              variant="contained"
+              color="primary"
+            >
+              Contact Us
+            </Button>
           </Form>
         )}
       />

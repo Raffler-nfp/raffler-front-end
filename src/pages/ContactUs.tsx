@@ -10,10 +10,22 @@ const useStyles = makeStyles({
     display: "flex",
     alignItems: "center"
   },
+  title: {
+    color: "#fff",
+    fontFamily: "'Anton', sans-serif",
+    textTransform: "uppercase",
+    marginBottom: "24px"
+  },
   wrapper: {
+    maxWidth: 500,
     display: "flex",
-    minHeight: 200,
-    padding: "0rem 6rem"
+    justifyContent: "center",
+    flexDirection: "column",
+    margin: "auto",
+    alignItems: "center",
+    padding: "16px",
+    border: "8px solid #c30037",
+    background: "#fff"
   },
   signup: {
     color: "#fff",
@@ -35,8 +47,12 @@ export default function ContactUs() {
   return (
     <React.Fragment>
       <ContentLayout className={classes.container}>
-        <Typography>Contact Us</Typography>
-        <ContactUsForm />
+        <Typography align="center" variant="h4" className={classes.title}>
+          Contact Us
+        </Typography>
+        <div className={classes.wrapper}>
+          <ContactUsForm />
+        </div>
       </ContentLayout>
     </React.Fragment>
   );
