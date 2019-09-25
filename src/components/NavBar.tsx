@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
   appBarContainer: {
     display: "flex",
     flexDirection: "row",
-    padding: theme.spacing(1)
+    padding: theme.spacing(0, 1)
   },
   borderBottom: {
     borderBottom: "1px solid rgba(255,255,255,0.3)"
@@ -65,7 +65,7 @@ const useStyles = makeStyles(theme => ({
   },
   link: {
     fontSize: "1.2rem",
-    fontFamily: "'Anton', sans-serif",
+    fontFamily: "Impact, sans-serif",
     margin: theme.spacing(1, 1.5),
     color: "#fff",
     marginLeft: 180
@@ -89,6 +89,9 @@ const useStyles = makeStyles(theme => ({
   },
   purple: {
     color: "#ffc9f8"
+  },
+  appBar: {
+    backgroundColor: "#ff0048"
   }
 }));
 
@@ -100,7 +103,7 @@ export default function NavBar() {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <AppBar position="static" elevation={0}>
+      <AppBar position="static" elevation={0} className={classes.appBar}>
         <Container maxWidth="lg" className={classes.appBarContainer}>
           <Link href="/" className={classes.logoContainer}>
             <img src={rafflerLogo} alt="" className={classes.logo} />
@@ -117,9 +120,8 @@ export default function NavBar() {
               </Link>
               <Link
                 color="textPrimary"
-                to="/learn-more"
+                href="#learn-more"
                 className={clsx(classes.link, classes.blue)}
-                component={AdapterLink}
               >
                 Learn more
               </Link>

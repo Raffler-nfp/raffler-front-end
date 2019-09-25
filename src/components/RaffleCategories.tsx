@@ -18,7 +18,7 @@ const content = [
     title: "Win v-bucks",
     image: `${category1}`,
     text:
-      "Win V-Bucks from the very popular game Fortnite. You can win up tp 200,000 V-Bucks",
+      "Win V-Bucks from the very popular game Fortnite. You can win up to 200,000 V-Bucks",
     action: "coming soon"
   },
   {
