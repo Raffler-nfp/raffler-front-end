@@ -13,7 +13,9 @@ const useStyles = makeStyles(theme => ({
     marginTop: "auto"
   },
   logo: {
-    maxWidth: 150
+    maxWidth: 150,
+    width: "100%",
+    height: "100%"
   },
   footerContainer: {
     display: "flex",
