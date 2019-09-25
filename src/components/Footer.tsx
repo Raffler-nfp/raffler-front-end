@@ -4,6 +4,7 @@ import Link from "@material-ui/core/Link";
 import { Link as RouterLink, LinkProps } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 import rafflerLogo from "../assets/mint_green.png";
+import rafflerLogoPink from "../assets/raffler_babypink.png";
 import clsx from "clsx";
 
 const useStyles = makeStyles(theme => ({
@@ -49,7 +50,11 @@ function Footer(props: any) {
     >
       <Container>
         <div className={classes.footerContainer}>
-          <img src={rafflerLogo} className={classes.logo} alt="" />
+          {props.location.pathname === "/" ? (
+            <img src={rafflerLogo} className={classes.logo} alt="" />
+          ) : (
+            <img src={rafflerLogoPink} className={classes.logo} alt="" />
+          )}
           <nav className={classes.footerMenu}>
             <Link
               color="textPrimary"

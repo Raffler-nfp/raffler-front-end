@@ -43,7 +43,7 @@ export default function TextBox() {
   const classes = useStyles();
   return (
     <ContentLayout className={classes.root}>
-      <div className={classes.contentContainer}>
+      <div className={classes.contentContainer} id="learn-more">
         <div className={classes.textContainer}>
           <Typography
             className={clsx(classes.useOswald, classes.useCap)}

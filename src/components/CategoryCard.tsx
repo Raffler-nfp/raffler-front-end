@@ -39,7 +39,9 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: red[500]
     },
     text: {
-      color: "#fff"
+      color: "#fff",
+      fontFamily: "Impact, sans-serif",
+      textTransform: "uppercase"
     },
     content: {
       minHeight: 180

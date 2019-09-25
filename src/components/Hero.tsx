@@ -8,7 +8,7 @@ import laptopImage from "../assets/laptop_image.png";
 const useStyles = makeStyles(theme => ({
   heroTitle: {
     textTransform: "uppercase",
-    fontFamily: "'Anton', sans-serif",
+    fontFamily: "Impact, sans-serif",
     fontSize: "3.2rem"
   },
   heightFiller: {
