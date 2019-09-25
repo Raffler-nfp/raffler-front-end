@@ -91,15 +91,15 @@ export default function TextBox() {
           >
             Revenue raised is donated to charitable organizations!
           </Typography>
-          <Link to="/sign-up" className={classes.link}>
-            <Button
-              variant="contained"
-              color="primary"
-              className={classes.button}
-            >
-              Sign up
-            </Button>
-          </Link>
+          <Button
+            variant="contained"
+            color="primary"
+            className={classes.button}
+            to="/sign-up"
+            component={Link}
+          >
+            Sign up
+          </Button>
         </div>
         <div className={classes.imgContainer}>
           <img src={orgImage} alt="" className={classes.img} />
