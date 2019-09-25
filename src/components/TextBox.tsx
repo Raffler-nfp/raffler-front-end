@@ -1,6 +1,7 @@
 import React from "react";
 import { Typography, Button, Theme } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
+import { Link } from "react-router-dom";
 import clsx from "clsx";
 
 import ContentLayout from "./ContentLayout";
@@ -36,6 +37,9 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   button: {
     marginTop: theme.spacing(2)
+  },
+  link: {
+    textDecoration: "none"
   }
 }));
 
@@ -87,13 +91,15 @@ export default function TextBox() {
           >
             Revenue raised is donated to charitable organizations!
           </Typography>
-          <Button
-            variant="contained"
-            color="primary"
-            className={classes.button}
-          >
-            Sign up
-          </Button>
+          <Link to="/sign-up" className={classes.link}>
+            <Button
+              variant="contained"
+              color="primary"
+              className={classes.button}
+            >
+              Sign up
+            </Button>
+          </Link>
         </div>
         <div className={classes.imgContainer}>
           <img src={orgImage} alt="" className={classes.img} />
