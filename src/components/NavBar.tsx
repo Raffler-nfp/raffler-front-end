@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { AppBar, Container } from "@material-ui/core";
 import Toolbar from "./Toolbar";
 import { Link as RouterLink, LinkProps } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import Link from "@material-ui/core/Link";
 import clsx from "clsx";
 
@@ -101,6 +102,10 @@ const AdapterLink = React.forwardRef<HTMLAnchorElement, LinkProps>(
   (props, ref) => <RouterLink innerRef={ref} {...props} />
 );
 
+const AdapterHashLink = React.forwardRef<HTMLAnchorElement, LinkProps>(
+  (props, ref) => <HashLink smooth innerRef={ref} {...props} />
+);
+
 export default function NavBar() {
   const classes = useStyles();
   return (
@@ -122,8 +127,9 @@ export default function NavBar() {
               </Link>
               <Link
                 color="textPrimary"
-                href="#learn-more"
+                to="/#learn-more"
                 className={clsx(classes.link, classes.blue)}
+                component={AdapterHashLink}
               >
                 Learn more
               </Link>
