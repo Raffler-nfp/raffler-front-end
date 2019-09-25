@@ -75,7 +75,9 @@ const useStyles = makeStyles(theme => ({
   },
   logo: {
     maxWidth: 180,
-    marginRight: 100
+    marginRight: 100,
+    width: "100%",
+    height: "100%"
   },
   toolbarContainer: {
     width: "100%",
