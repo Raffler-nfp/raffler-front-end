@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
   appBarContainer: {
     display: "flex",
     flexDirection: "row",
-    padding: theme.spacing(0, 1)
+    padding: theme.spacing(1)
   },
   borderBottom: {
     borderBottom: "1px solid rgba(255,255,255,0.3)"
