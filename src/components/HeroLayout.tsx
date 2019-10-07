@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     // alignItems: "center",
     [theme.breakpoints.up("sm")]: {
-      height: "55vh",
+      height: "60vh",
       minHeight: 300,
       maxHeight: 1300
     }
