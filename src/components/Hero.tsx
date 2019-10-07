@@ -38,7 +38,8 @@ const useStyles = makeStyles(theme => ({
   heroContainer: {
     display: "flex",
     justifyContent: "space-between",
-    width: "100%"
+    width: "100%",
+    marginTop: theme.spacing(6)
   },
   heroImage: {
     maxWidth: 580
@@ -47,7 +48,7 @@ const useStyles = makeStyles(theme => ({
     flex: 1
   },
   mainText: {
-    marginRight: 180
+    marginRight: 300
   },
   green: {
     color: "#00f0a0"
