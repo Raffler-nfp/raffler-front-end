@@ -52,12 +52,18 @@ const useStyles = makeStyles((theme: Theme) => ({
     backgroundSize: "cover"
   },
   categoryWrapper: {
-    padding: theme.spacing(6)
+    padding: theme.spacing(1),
+    [theme.breakpoints.up("sm")]: {
+      padding: theme.spacing(6)
+    }
   },
   categoryInner: {
     border: "8px solid #ac4da0",
     background: "#fff",
-    padding: theme.spacing(4)
+    padding: theme.spacing(1),
+    [theme.breakpoints.up("sm")]: {
+      padding: theme.spacing(4)
+    }
   },
   viewMore: {
     minWidth: 180,
@@ -78,9 +84,12 @@ const useStyles = makeStyles((theme: Theme) => ({
   subtitle: {
     textTransform: "uppercase",
     fontWeight: 300,
-    width: "60%",
     margin: "auto",
-    marginBottom: theme.spacing(4)
+    width: "80%",
+    marginBottom: theme.spacing(4),
+    [theme.breakpoints.up("sm")]: {
+      width: "60%"
+    }
   }
 }));
 
@@ -109,12 +118,12 @@ export default function RaffleCategories() {
             <Grid container spacing={2}>
               {content.map(el => {
                 return (
-                  <Grid item md="auto" key={el.id}>
+                  <Grid item md="auto" xs={12} key={el.id}>
                     <CategoryCard info={el} />
                   </Grid>
                 );
               })}
-              <Grid item className={classes.viewMore} md="auto">
+              <Grid item className={classes.viewMore} xs={12} md="auto">
                 View all <br /> categories{" "}
                 <Avatar className={classes.avatar}>
                   <ArrowForward />

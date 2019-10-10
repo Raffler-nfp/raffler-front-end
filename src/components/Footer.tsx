@@ -19,16 +19,26 @@ const useStyles = makeStyles(theme => ({
   },
   footerContainer: {
     display: "flex",
-    padding: theme.spacing(2)
+    padding: theme.spacing(2),
+    flexDirection: "column",
+    [theme.breakpoints.up("sm")]: {
+      flexDirection: "row"
+    }
   },
   footerMenu: {
-    display: "flex"
+    display: "flex",
+    flexDirection: "column",
+    [theme.breakpoints.up("sm")]: {
+      flexDirection: "row"
+    }
   },
   link: {
     fontSize: "1.2rem",
     fontFamily: "'Anton', sans-serif",
     color: "#fff",
-    marginLeft: 180
+    [theme.breakpoints.up("sm")]: {
+      marginLeft: 180
+    }
   },
   custom: {
     backgroundColor: "#ffb6c1"

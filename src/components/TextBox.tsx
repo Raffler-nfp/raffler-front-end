@@ -12,7 +12,11 @@ const useStyles = makeStyles((theme: Theme) => ({
     background: "#fff"
   },
   useOswald: {
-    fontFamily: '"Oswald", sans-serif'
+    fontFamily: '"Oswald", sans-serif',
+    fontSize: "2rem",
+    [theme.breakpoints.up("sm")]: {
+      fontSize: "3rem"
+    }
   },
   useCap: {
     textTransform: "uppercase"
@@ -20,11 +24,21 @@ const useStyles = makeStyles((theme: Theme) => ({
   contentContainer: {
     display: "flex",
     padding: theme.spacing(8, 0, 4, 0),
-    justifyContent: "center"
+    justifyContent: "center",
+    flexDirection: "column",
+    [theme.breakpoints.up("sm")]: {
+      flexDirection: "row"
+    }
   },
   textContainer: {
-    maxWidth: 450,
-    marginRight: 200
+    order: 2,
+    paddingTop: theme.spacing(2),
+    [theme.breakpoints.up("sm")]: {
+      paddingTop: 0,
+      maxWidth: 450,
+      marginRight: 200,
+      order: 1
+    }
   },
   largeFont: {
     fontSize: "1.4rem"
@@ -33,7 +47,11 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: "100%"
   },
   imgContainer: {
-    maxWidth: 400
+    maxWidth: 400,
+    order: 1,
+    [theme.breakpoints.up("sm")]: {
+      order: 2
+    }
   },
   button: {
     marginTop: theme.spacing(2)

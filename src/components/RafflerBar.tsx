@@ -9,7 +9,10 @@ const useStyles = makeStyles(theme => ({
     background: "linear-gradient(to bottom, #ff0048 50%, #fff 50%);"
   },
   logoContainer: {
-    maxWidth: "300px"
+    maxWidth: "150px",
+    [theme.breakpoints.up("sm")]: {
+      maxWidth: "300px"
+    }
   },
   rafflerLogo: {
     width: "100%"

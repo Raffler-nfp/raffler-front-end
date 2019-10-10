@@ -10,10 +10,12 @@ import { CardActions } from "@material-ui/core";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     card: {
-      maxWidth: 200,
       borderRadius: 0,
       backgroundColor: "#ac4da0",
-      color: "#fff"
+      color: "#fff",
+      [theme.breakpoints.up("sm")]: {
+        maxWidth: 200
+      }
     },
     title: {
       fontSize: "1rem",

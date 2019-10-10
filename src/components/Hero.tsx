@@ -9,10 +9,13 @@ const useStyles = makeStyles(theme => ({
   heroTitle: {
     textTransform: "uppercase",
     fontFamily: "Impact, sans-serif",
-    fontSize: "3.2rem"
+    fontSize: "2rem",
+    [theme.breakpoints.up("sm")]: {
+      fontSize: "3.2rem"
+    }
   },
   heightFiller: {
-    marginTop: 100,
+    marginTop: 10,
     [theme.breakpoints.up("sm")]: {
       marginTop: 60
     }
@@ -39,16 +42,25 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     justifyContent: "space-between",
     width: "100%",
-    marginTop: theme.spacing(6)
+    flexDirection: "column",
+    [theme.breakpoints.up("sm")]: {
+      marginTop: theme.spacing(6),
+      flexDirection: "row"
+    }
   },
   heroImage: {
-    maxWidth: 580
+    width: "100%",
+    [theme.breakpoints.up("sm")]: {
+      maxWidth: 580
+    }
   },
   left: {
     flex: 1
   },
   mainText: {
-    marginRight: 300
+    [theme.breakpoints.up("sm")]: {
+      marginRight: 300
+    }
   },
   green: {
     color: "#00f0a0"
